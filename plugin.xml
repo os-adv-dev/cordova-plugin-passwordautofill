@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-passwordautofill" version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>cordova-plugin-passwordautofill</name>
+    <js-module name="cordova-plugin-passwordautofill" src="www/cordova-plugin-passwordautofill.js">
+        <clobbers target="cordova.plugins.cordova-plugin-passwordautofill" />
+    </js-module>
+
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="cordova-plugin-passwordautofill">
+                <param name="ios-package" value="cordova-plugin-passwordautofill" />
+            </feature>
+        </config-file>
+        <!--<source-file src="src/ios/cordova-plugin-passwordautofill.m" />-->
+        <resource-file src="src/ios/trapeze-conf.yaml" target="../../trapeze-conf.yaml" />
+        <dependency id="cordova-plugin-trapeze" url="https://github.com/agoncalvesos/cordova-plugin-trapeze" />
+        <preference name="TrapezeVars" default="default"/>
+
+        <config-file target="../../config.xml" parent="/widget">
+            <preference name="TrapezeVars" value='$TRAPEZEVARS' />
+        </config-file>
+
+        <!--<dependency id="cordova-plugin-trapeze" url="../../../2.TSD/cordova-plugin-trapeze" />-->
+    </platform>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="cordova-plugin-passwordautofill">
+                <param name="android-package" value="cordova-plugin-passwordautofill.cordova-plugin-passwordautofill" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <!--<source-file src="src/android/cordova-plugin-passwordautofill.java" target-dir="src/cordova-plugin-passwordautofill/cordova-plugin-passwordautofill" />-->
+    </platform>
+</plugin>

@@ -1,0 +1,8 @@
+vars:
+  ASSOCIATED_DOMAINS:
+    type: array
+
+platforms:
+  ios:
+    entitlements:
+      - com.apple.developer.associated-domains: $ASSOCIATED_DOMAINS
