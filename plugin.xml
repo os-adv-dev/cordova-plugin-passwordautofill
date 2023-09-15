@@ -2,9 +2,9 @@
 <plugin id="cordova-plugin-passwordautofill" version="1.0.0"
     xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>cordova-plugin-passwordautofill</name>
-    <js-module name="cordova-plugin-passwordautofill" src="www/cordova-plugin-passwordautofill.js">
-        <clobbers target="cordova.plugins.cordova-plugin-passwordautofill" />
+    <name>cordova plugin passwordautofill</name>
+    <js-module name="PasswordAutofill" src="www/passwordautofill.js">
+        <clobbers target="cordova.plugins.passwordautofill" />
     </js-module>
 
     <platform name="ios">
@@ -27,7 +27,7 @@
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="cordova-plugin-passwordautofill">
-                <param name="android-package" value="cordova-plugin-passwordautofill.cordova-plugin-passwordautofill" />
+                <param name="android-package" value="cordova-plugin-passwordautofill.passwordautofill" />
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
