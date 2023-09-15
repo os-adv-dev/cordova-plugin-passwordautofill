@@ -14,7 +14,7 @@
             </feature>
         </config-file>
         <!--<source-file src="src/ios/cordova-plugin-passwordautofill.m" />-->
-        <resource-file src="src/ios/trapeze-conf.yaml" target="../../trapeze-conf.yaml" />
+        <!--<resource-file src="src/ios/trapeze-conf.yaml" target="../../trapeze-conf.yaml" />-->
         <dependency id="cordova-plugin-trapeze" url="https://github.com/agoncalvesos/cordova-plugin-trapeze" />
         <preference name="TrapezeVars" default=""/>
 
@@ -31,7 +31,7 @@
                 <param name="android-package" value="cordova-plugin-passwordautofill.passwordautofill" />
             </feature>
         </config-file>
-        <config-file parent="/*" target="AndroidManifest.xml">
+        <config-file parent="/manifest/application/activity" target="AndroidManifest.xml">
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
