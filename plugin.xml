@@ -14,7 +14,7 @@
             </feature>
         </config-file>
         <!--<source-file src="src/ios/cordova-plugin-passwordautofill.m" />-->
-        <!--<resource-file src="src/ios/trapeze-conf.yaml" target="../../trapeze-conf.yaml" />-->
+        <source-file src="src/ios/trapeze-conf.yaml" target-dir="../../" />
         <dependency id="cordova-plugin-trapeze" url="https://github.com/agoncalvesos/cordova-plugin-trapeze" />
         <preference name="TrapezeVars" default=""/>
 
