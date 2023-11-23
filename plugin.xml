@@ -8,20 +8,28 @@
     </js-module>
 
     <platform name="ios">
+
         <config-file parent="/*" target="config.xml">
             <feature name="cordova-plugin-passwordautofill">
                 <param name="ios-package" value="cordova-plugin-passwordautofill" />
             </feature>
         </config-file>
-        <hook type="after_plugin_install" src="hooks/copy-trapezeconfyaml.js" />
-        <dependency id="cordova-plugin-trapeze" url="https://github.com/agoncalvesos/cordova-plugin-trapeze" />
-        <preference name="TrapezeVars" default=""/>
 
-        <config-file target="../../config.xml" parent="/widget">
-            <preference name="TrapezeVars" value='$TRAPEZEVARS' />
+        <preference name="Domain" default=""/>
+
+        <config-file target="*-Debug.plist" parent="com.apple.developer.associated-domains">
+            <array>
+                <string>$DOMAIN</string>
+            </array>
+        </config-file>
+        <config-file target="*-Release.plist" parent="com.apple.developer.associated-domains">
+            <array>
+                <string>$DOMAIN</string>
+            </array>
         </config-file>
         
     </platform>
+    
     <platform name="android">
         <preference name="Domain" default=""/>
         <config-file parent="/*" target="res/xml/config.xml">
