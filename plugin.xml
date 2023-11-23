@@ -15,16 +15,16 @@
             </feature>
         </config-file>
 
-        <preference name="Domain" default=""/>
+        <preference name="DOMAIN_IOS" default=""/>
 
         <config-file target="*-Debug.plist" parent="com.apple.developer.associated-domains">
             <array>
-                <string>$DOMAIN</string>
+                <string>$DOMAIN_IOS</string>
             </array>
         </config-file>
         <config-file target="*-Release.plist" parent="com.apple.developer.associated-domains">
             <array>
-                <string>$DOMAIN</string>
+                <string>$DOMAIN_IOS</string>
             </array>
         </config-file>
         
